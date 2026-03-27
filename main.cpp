@@ -90,7 +90,8 @@ void mostrar(Cola c) {
     Nodo* aux = c.inicio;
     int i = 1;
 
-    cout << "\nLista de estudiantes:\n";
+        cout << "\nEstudiantes en espera: " << c.cantidad << "\n";
+        cout << "Lista de estudiantes:\n";
 
     while (aux != nullptr) {
         cout << i << ") " << aux->nombre 
@@ -196,6 +197,9 @@ int main() {
                 cout << "Codigo: ";
                 cin.getline(cod, 20);
 
+               if (codigoExiste(cola, cod))
+                  cout << "\nEse codigo ya esta registrado\n";
+                else
                 registrar(cola, nom, cod);
                 break;
             }
