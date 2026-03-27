@@ -155,7 +155,18 @@ void limpiar(Cola& c) {
     c.cantidad = 0;
 }
 
+
 // MAIN
+bool codigoExiste(const Cola& c, const char* codigo) {
+    Nodo* actual = c.inicio;
+    while (actual != nullptr) {
+        if (strcmp(actual->codigo, codigo) == 0)
+            return true;
+        actual = actual->sig;
+    }
+    return false;
+}
+
 int main() {
     Cola cola;
     int op;
