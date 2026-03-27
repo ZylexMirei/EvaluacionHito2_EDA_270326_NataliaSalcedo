@@ -47,9 +47,6 @@ Compilar
 g++ -std=c++11 -o turnos main.cpp
 Ejecutar
 
-En Linux o macOS:
-
-./turnos
 
 En Windows:
 
